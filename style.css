@@ -92,9 +92,14 @@ body {
 .condition { font-size: 18px; opacity: 0.8; font-weight: 300; }
 
 .details {
-    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
     font-size: 14px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 18px;
 }
+
 
 .hour-card {
     flex: 0 0 65px;
