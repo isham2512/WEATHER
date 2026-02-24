@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Ultra Pro — Immersive Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" id="mainCard">
+    <div class="search">
+        <input type="text" id="citySearch" placeholder="Search city..." autocomplete="off">
+        <div class="suggestions" id="suggestionBox"></div>
+    </div>
+    
+    <div id="weatherContent">
+        <h2 id="cityName" style="margin-top:20px;">Syncing...</h2>
+        <div class="temp" id="currTemp">--°</div>
+        <div class="condition" id="currDesc">Fetching atmosphere...</div>
+
+        <div class="details">
+            <div>🌬 <span id="windVal">0 km/h</span></div>
+            <div>💧 <span id="humidVal">0%</span></div>
+        </div>
+
+        <div class="hourly" id="hourlyWrapper"></div>
+        
+        <div class="metric-container">
+            <select id="metricSelect">
+                <option value="temp_c">Temperature Trend</option>
+                <option value="humidity">Humidity Levels</option>
+                <option value="wind_kph">Wind Speed</option>
+            </select>
+            <div class="select-arrow">▼</div>
+        </div>
+
+        <div class="chart-wrapper">
+            <canvas id="weatherChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
