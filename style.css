@@ -21,7 +21,7 @@ body {
     background: #1a1a1a;
 }
 
-/* Animations */
+
 .lightning-flash { animation: flash 0.2s ease-out 3; }
 @keyframes flash {
     0% { background: inherit; }
@@ -29,7 +29,7 @@ body {
     100% { background: inherit; }
 }
 
-/* Container */
+
 .container {
     width: 92%;
     max-width: 420px;
@@ -46,7 +46,7 @@ body {
 }
 
 
-/* Search & Suggestions */
+
 .search { position: relative; }
 .search input {
     width: 100%;
@@ -81,7 +81,7 @@ body {
 }
 .suggestion-item:hover { background: rgba(255,255,255,0.1); }
 
-/* Weather Info */
+
 .temp {
     font-size: 52px;
     font-weight: 600;
@@ -108,7 +108,7 @@ body {
 }
 
 
-/* Hourly Forecast */
+
 .hourly {
     display: flex;
     gap: 15px;
@@ -119,8 +119,6 @@ body {
 .hourly::-webkit-scrollbar { display: none; }
 
 
-
-/* Form Elements */
 .metric-container {
     position: relative; 
     margin-top: 25px;
@@ -157,7 +155,7 @@ body {
     opacity: 0.5;
 }
 
-/* Chart */
+
 .chart-wrapper {
     height: 150px; 
     margin-top: 15px; 
@@ -167,7 +165,7 @@ body {
     filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3));
 }
 
-/* Environment Particles */
+
 .celestial {
     position: absolute;
     border-radius: 50%;
@@ -186,3 +184,4 @@ body {
 }
 
 .particle { position: absolute; background: #fff; pointer-events: none; z-index: 2; }
+
