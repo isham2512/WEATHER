@@ -8,7 +8,6 @@ const searchInput = document.getElementById("citySearch");
 const suggestionBox = document.getElementById("suggestionBox");
 const metricSelect = document.getElementById("metricSelect");
 
-/* ---------- Load Location ---------- */
 
 window.onload = () => {
 try{
@@ -21,7 +20,7 @@ p=>fetchWeather(`${p.coords.latitude},${p.coords.longitude}`),
 }catch(err){ console.error(err); }
 };
 
-/* ---------- Search ---------- */
+
 
 let searchTimeout;
 
@@ -72,7 +71,6 @@ suggestionBox.style.display="none";
 }
 });
 
-/* ---------- Weather Fetch ---------- */
 
 async function fetchWeather(query){
 try{
@@ -92,7 +90,6 @@ console.error(err);
 }
 }
 
-/* ---------- Update UI ---------- */
 
 function updateInterface(data){
 try{
@@ -121,7 +118,7 @@ applyEnvironment(data);
 }catch(err){ console.error(err); }
 }
 
-/* ---------- Hourly Cards ---------- */
+
 
 function renderHourly(hours){
 const wrap=document.getElementById("hourlyWrapper");
@@ -147,7 +144,7 @@ wrap.appendChild(div);
 });
 }
 
-/* ---------- Chart ---------- */
+
 
 function renderChart(hours,metric="temp_c"){
 const canvas=document.getElementById("weatherChart");
@@ -208,7 +205,7 @@ y:{display:false}
 });
 }
 
-/* ---------- Environment ---------- */
+
 
 function applyEnvironment(data){
 
@@ -226,7 +223,7 @@ const rect=card.getBoundingClientRect();
 const localTime=new Date(data.location.localtime);
 const hour=localTime.getHours()+localTime.getMinutes()/60;
 
-/* Background Theme */
+
 
 let bg;
 
@@ -242,7 +239,7 @@ bg="linear-gradient(135deg,#020111,#191d30,#000)";
 
 document.body.style.background=bg;
 
-/* Sun / Moon Path */
+
 
 let progress;
 
@@ -272,7 +269,7 @@ celestial.style.top=y+"px";
 
 document.body.appendChild(celestial);
 
-/* Effects */
+
 
 if(condition.includes("rain")) createParticles("rain");
 if(condition.includes("snow")) createParticles("snow");
@@ -281,7 +278,7 @@ if(!isDay) createStars();
 
 }
 
-/* ---------- Effects ---------- */
+
 
 function createParticles(type){
 
@@ -333,3 +330,4 @@ s.style.left=Math.random()*100+"vw";
 document.body.appendChild(s);
 }
 }
+
